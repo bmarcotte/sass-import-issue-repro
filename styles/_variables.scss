@@ -1,0 +1,135 @@
+@use '@angular/material' as mat;
+
+// All material color values can be found in node_modules/@angular/material/core/theming/_palette.scss
+
+// Palette definitions
+$snd-app-error-palette: mat.define-palette(mat.$red-palette, A700, 50, 900);
+$snd-app-success-palette: mat.define-palette(mat.$green-palette, A700, 50, 800);
+$snd-app-warning-palette: mat.define-palette(mat.$amber-palette, 500, 50, A700);
+$snd-app-indigo-palette: mat.define-palette(mat.$indigo-palette, A100, 50, 700);
+$snd-app-cyan-palette: mat.define-palette(mat.$cyan-palette, A700, 50, 800);
+$snd-app-purple-palette: mat.define-palette(mat.$purple-palette, 500, 50, 800);
+$snd-app-blue-palette: mat.define-palette(mat.$blue-palette, 500, 200, 900);
+$snd-app-grey-palette: mat.define-palette(mat.$grey-palette, 500, 50, 900);
+$snd-app-primary-palette: mat.define-palette(mat.$blue-palette, 500, 50, 700);
+
+$color-primary-base: mat.get-color-from-palette($snd-app-primary-palette, default); // #2196F3
+$color-primary-lighter: mat.get-color-from-palette($snd-app-primary-palette, lighter); // #E3F2FD
+$color-primary-light: mat.get-color-from-palette($snd-app-blue-palette, lighter); // #90CAF9
+$color-primary-dark: mat.get-color-from-palette($snd-app-primary-palette, darker); // #1976D2
+$color-primary-darker: mat.get-color-from-palette($snd-app-blue-palette, darker); // #0D47A1
+
+$color-white: #ffffff;
+$color-grey-lighter: #f7f7f8;
+$color-grey-light: #ebedef;
+$color-grey: #cfd3d8;
+$color-grey-dark: #889099;
+$color-grey-darker: #455965;
+$color-black: #202327;
+$dark-disabled-text: rgba(#000939, 0.38);
+$dark-secondary-text: rgba(#000939, 0.54);
+
+$color-error-base: mat.get-color-from-palette($snd-app-error-palette, default); // #D40001
+$color-error-light: mat.get-color-from-palette($snd-app-error-palette, lighter); // #FFEBEE
+$color-error-dark: mat.get-color-from-palette($snd-app-error-palette, darker); // #B61C1C
+
+$color-success-base: mat.get-color-from-palette($snd-app-success-palette, default); // #00C853
+$color-success-light: mat.get-color-from-palette($snd-app-success-palette, lighter); // #E8F5E9
+$color-success-dark: mat.get-color-from-palette($snd-app-success-palette, darker); // #2E7D32
+
+$color-warning-base: mat.get-color-from-palette($snd-app-warning-palette, default); // #FFC029
+$color-warning-light: mat.get-color-from-palette($snd-app-warning-palette, lighter); // #FFF8E2
+$color-warning-dark: mat.get-color-from-palette($snd-app-warning-palette, darker); // #FFAB21
+
+$color-indigo-base: mat.get-color-from-palette($snd-app-indigo-palette, default); // #8B9EFC
+$color-indigo-light: mat.get-color-from-palette($snd-app-indigo-palette, lighter); // #E8EAF6
+$color-indigo-dark: mat.get-color-from-palette($snd-app-indigo-palette, darker); // #303F9F
+
+$color-cyan-base: mat.get-color-from-palette($snd-app-cyan-palette, default); // #0BB8D3
+$color-cyan-light: mat.get-color-from-palette($snd-app-cyan-palette, lighter); // #E0F7FA
+$color-cyan-dark: mat.get-color-from-palette($snd-app-cyan-palette, darker); // #09838F
+
+$color-purple-base: mat.get-color-from-palette($snd-app-purple-palette, default); // #9C28AD
+$color-purple-light: mat.get-color-from-palette($snd-app-purple-palette, lighter); // #F3E5F5
+$color-purple-dark: mat.get-color-from-palette($snd-app-purple-palette, darker); // #6A1B9A
+
+// NOTE: ALIASES
+
+$border-light-grey: $color-grey-light;
+$text-color-primary: $color-black;
+$text-color-secondary: $color-grey-dark;
+$text-color-hint: $color-grey-dark;
+$divider: $color-grey-light;
+
+$background-color: $color-grey-lighter;
+$disabled-color: $color-grey-light;
+$color-error-background: $color-grey-light;
+
+$selected: $color-grey-light;
+
+$material-background-color: mat.get-color-from-palette($snd-app-grey-palette, lighter);
+
+// font-colors classes
+
+.snd-text {
+  color: $text-color-primary;
+  font-size: 12px;
+}
+
+.snd-text-title {
+  color: $text-color-primary;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.snd-text-subtitle {
+  color: $text-color-secondary;
+  font-size: 14px;
+}
+
+.snd-text-headline {
+  color: $text-color-primary;
+  font-size: 16px;
+}
+
+.snd-text-highlight {
+  color: $color-primary-base;
+  font-size: 22px;
+}
+
+.primary-text {
+  color: $text-color-primary !important;
+}
+
+.secondary-text {
+  color: $text-color-secondary !important;
+}
+
+.disabled-text {
+  color: $text-color-hint !important;
+}
+
+.color-bad,
+.color-critical {
+  color: $color-error-base !important;
+}
+
+.color-good {
+  color: $color-success-base !important;
+}
+
+.color-warn,
+.color-warning {
+  color: $color-warning-base !important;
+}
+
+.color-grey,
+.color-disabled {
+  color: $color-grey !important;
+}
+
+.color-blue,
+.color-info {
+  color: $color-primary-base !important;
+}

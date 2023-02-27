@@ -1,0 +1,35 @@
+@use 'styles/mixins' as mix;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.material-icons.mat-12 {
+  @include mix.mat-icon-size(12);
+}
+
+.fill-view {
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cursor-help {
+  cursor: help;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

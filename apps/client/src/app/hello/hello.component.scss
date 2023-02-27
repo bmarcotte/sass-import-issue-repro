@@ -1,0 +1,9 @@
+@use 'styles/variables' as var;
+
+.dark-grey {
+  color: var.$color-grey-darker;
+}
+
+.primary {
+  color: var.$color-primary-base;
+}
