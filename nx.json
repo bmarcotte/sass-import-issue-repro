@@ -3,15 +3,14 @@
   "npmScope": "angular15-sass-issue",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": [
           "build",
           "lint",
           "test",
           "e2e"
-        ],
-        "accessToken": "YTdlMjM4OTEtZjZkZC00YWZlLWFmMDctZDQwNDMzZjcyZTE3fHJlYWQtd3JpdGU="
+        ]
       }
     }
   },
