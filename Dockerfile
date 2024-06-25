@@ -1,5 +1,6 @@
-ARG nodejs_GIT_BRANCH_OR_VERSION
-FROM node:18-bullseye as with_src
+ARG NODE_VERSION
+ARG NODE_PLATFORM
+FROM node:${NODE_VERSION}-${NODE_PLATFORM} as with_src
 
 # Install dependencies
 # -----------------------------------------------------------------------------
@@ -18,4 +19,4 @@ FROM with_src as build-diff-dist
 # Build the apps which are impacted by the differences with the given base
 # -----------------------------------------------------------------------------
  
-RUN npx nx run-many --target=build --configuration=production --parallel=5
+CMD ["npx", "nx", "run-many", "--target=build", "--configuration=production", "--parallel=5"]

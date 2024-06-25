@@ -1,0 +1,17 @@
+services:
+  sassissue-build-node18-bullseye:
+    image: sassissue-build:node18-bullseye
+    build:
+      context: .
+      target: build-diff-dist
+      args:
+        NODE_VERSION: 18.20.3
+        NODE_PLATFORM: bullseye
+  sassissue-build-node16-bullseye:
+    image: sassissue-build:node16-bullseye
+    build:
+      context: .
+      target: build-diff-dist
+      args:
+        NODE_VERSION: 16.20.2
+        NODE_PLATFORM: bullseye
